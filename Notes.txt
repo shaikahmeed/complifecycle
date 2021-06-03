@@ -1,0 +1,26 @@
+Angular Component Life Cycle Hooks:
+- Whenever we execute the angular application it creates the component and updates it and finally it will destroy once if the compnentn is used in the application.
+- All these phases of a component are maintaine by a sequence of events and these events are controllerd by methods and these methods are called "Hook Methods".
+
+Hook Methods      
+1) ngOnChanges()       
+- Angular set the value, and also bind the value to any property.
+- These updates are notified by using an object called "SimpleChanges".
+- Will get previous values and also current values.
+
+2) ngOnInit()
+- It will be called after the first ngOnChnage() is happen.
+- In this stage it will initilize all the directives of the components
+
+3) ngDoCheck(): 
+- It will be identifyy the every change in detection
+- Transporting the data between the components, when we call @Input() and @Output()
+
+4) ngAfterContentInit():
+- To execute the dynemic content which was supplied by using <ng-container> and <ng-template> 
+
+5) ngAfterContentChecked(): It is responsible for content projection.
+6) ngAfterViewInit(): It used to fireup after the initilization of memory for component views and it's child views
+7) ngAfterViewCheck():It renders the finel component
+8) ngOnDestroy(): Used to clean up the memory.
+
